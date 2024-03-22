@@ -1,0 +1,210 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(171, 171, 179);
+  font-size: 1rem;
+}
+
+/* Header */
+body > header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2b3035;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Logo*/
+div.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 130px;
+  object-fit: contain;
+}
+
+.logo > p {
+  font-size: 1.3rem;
+  align-self: center;
+}
+
+/* Navigation */
+nav > ul {
+  display: flex;
+  gap: 3rem;
+}
+
+nav li {
+  list-style: none;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav li:hover {
+  font-weight: bold;
+}
+
+/* Aside Styles */
+aside img {
+  width: 50vw;
+  border-radius: 20px;
+  filter: saturate(50%);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 2rem;
+  gap: 2rem;
+}
+
+#home section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 40%;
+  gap: 1rem;
+}
+
+#home section > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: saturate(70%);
+}
+
+#home > section h3 {
+  text-align: center;
+}
+
+#home > section .kepsek {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+#home > section p {
+  text-align: justify;
+}
+
+.my-school {
+  color: white;
+  font-weight: bold;
+}
+
+/* Button Styles */
+button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+  background-color: #2b3035;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Pendaftaran */
+#daftar {
+  padding: 8rem 2rem;
+}
+#daftar > h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Card */
+.container-card {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.card {
+  padding: 2rem;
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: justify;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100%;
+  filter: saturate(60%);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #2b3035;
+  color: #fff;
+  text-align: center;
+}
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .logo > img {
+    width: 100px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  #home {
+    flex-direction: column;
+    /* margin-top: 0; */
+  }
+
+  /* #home aside {
+    order: 1;
+  } */
+
+  aside {
+    display: none;
+  }
+  .container-card {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo > p {
+    display: none;
+  }
+}
